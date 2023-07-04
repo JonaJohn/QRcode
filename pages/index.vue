@@ -1,35 +1,29 @@
 <template>
-  <div class="grid grid-cols-2 divide-x">
-    <div class="Mitte">
-      <h3>QrCode:</h3>
-      <input style="margin: 10px" v-model="value" type="text" />
+  <div class="grid grid-cols-2 divide-x p-5">
+    <div class="Mitte ">
+      <b>
+
+      <input style="margin: 10px" v-model="value" type="text" size="23" />
+    </b>
       <button class="bg-sky-500 hover:bg-sky-700 ..." @click="forceRerender()">
-        save changes
+
       </button>
-      <qrcode-vue
-        v-if="renderComponent"
-        :value="value"
-        :size="size"
-        level="L"
-      />
+        <qrcode-vue class="border-solid border-2 border-gray-200 ... " v-if="renderComponent" :value="value" :size="size" level="L" />
+
     </div>
     <div class="Mitte">
-      <h3>QrCode:</h3>
-      <input style="margin: 10px" v-model="value" type="text" />
+      <strong>
+      <input style="margin: 10px" v-model="value" type="text" size="23" />
+    </strong>
       <button class="bg-sky-500 hover:bg-sky-700 ..." @click="forceRerender()">
-        save changes
+
       </button>
-      <qrcode-vue
-        v-if="renderComponent"
-        :value="value"
-        :size="size"
-        level="L"
-      />
+      <qrcode-vue class="border-solid border-2 border-gray-200 ... " v-if="renderComponent" :value="value" :size="size" level="L" />
     </div>
   </div>
 </template>
 
-  <script setup>
+<script setup>
 import QrcodeVue from "qrcode.vue";
 import { nextTick, ref } from "vue";
 
@@ -50,12 +44,19 @@ const forceRerender = async () => {
 };
 </script>
 
-  <style>
+<style>
+input {
+  font-size: 2em;
+
+}
+
+
 .Mitte {
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
+
 .button {
   padding: 8px;
   background-color: #007bff;
