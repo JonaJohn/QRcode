@@ -3,7 +3,7 @@
     <div class="Mitte ">
       <b>
 
-      <input style="margin: 10px" v-model="value" type="text" size="23" />
+      <input style="margin: 10px" v-model="value" type="text" size="18" />
     </b>
       <button class="bg-sky-500 hover:bg-sky-700 ..." @click="forceRerender()">
 
@@ -13,7 +13,7 @@
     </div>
     <div class="Mitte">
       <strong>
-      <input style="margin: 10px" v-model="value" type="text" size="23" />
+      <input style="margin: 10px" v-model="value" type="text" size="18" />
     </strong>
       <button class="bg-sky-500 hover:bg-sky-700 ..." @click="forceRerender()">
 
@@ -46,7 +46,7 @@ const forceRerender = async () => {
 
 <style>
 input {
-  font-size: 2em;
+  font-size: 2.5em;
 
 }
 
